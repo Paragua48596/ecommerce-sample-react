@@ -163,6 +163,9 @@ span.premium {
 }
 
 @media screen and (max-width: 750px) {
+  .swiper-text {
+    width: 90%;
+  }
   .swiper-text > p {
     font-size: 2rem;
   }
