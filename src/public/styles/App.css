@@ -8,6 +8,7 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -35,7 +36,8 @@ body {
 
 input[type="text"] {
   display: block;
-  width: calc(100% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */ 
+  width: calc(100% - 24px);
+  /*20px [ left & Right ] padding + 4px border [ left & Right ] */
   font-size: 18px;
   font-weight: 600;
   color: var(--fontColor);
@@ -77,4 +79,97 @@ input[type="text"] {
 .icons img:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+
+/* Slider */
+
+header {
+  height: 500px;
+}
+
+.swiper,
+.swiper-content,
+.swiper-text {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-content {
+  background: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+.swiper-text {
+  width: 80%;
+  color: #FAFAFA;
+  font-size: 50px;
+  font-weight: 800;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span.discount {
+  font-weight: 900;
+  font-size: 80px;
+}
+
+span.food {
+  font-weight: 900;
+  color: #FF6400;
+}
+
+span.fast {
+  font-style: italic;
+  color: #55D3FF;
+}
+
+span.premium {
+  font-size: 70px;
+  color: #FFDC19;
+}
+
+@media screen and (max-width: 750px) {
+  .swiper-text > p {
+    font-size: 2rem;
+  }
+  .swiper-text p > span {
+    font-size: inherit;
+    font-weight: 800;
+    color: #FFF;
+  }
 }
