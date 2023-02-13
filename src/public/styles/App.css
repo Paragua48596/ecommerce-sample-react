@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+:root {
+  --mainColor: #FF331B;
+  --fontColor: #111035;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  width: 100%;
   min-height: 100vh;
+}
+
+/* Menu */
+
+.navbar {
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--fontColor);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.search {
+  max-width: 600px;
+  flex: 0 1 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"] {
+  display: block;
+  width: calc(100% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */ 
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--fontColor);
+  padding: 10px;
+  margin: 0 20px;
+  border: 2px solid var(--fontColor);
+}
+
+.search form {
+  position: relative;
+}
+
+.search form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background: transparent;
+  border: transparent;
+  font-size: 20px;
+  color: var(--fontColor);
+  cursor: pointer;
+  outline: 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons img {
+  width: 35px;
+  margin: 0 20px;
+  transition: 0.2s;
+}
+
+.icons img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
