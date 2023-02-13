@@ -7,9 +7,9 @@ import Menu from './components/Menu';
 
 function App() {
   return (
-    <React.Fragment>
+    <div className='App'>
       <Menu />
-    </React.Fragment>
+    </div>
   );
 }
 
