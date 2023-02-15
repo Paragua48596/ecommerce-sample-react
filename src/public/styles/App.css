@@ -15,6 +15,24 @@ body {
   color: var(--fontColor);
 }
 
+section, header, footer {
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  width: 85%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+
 /* Menu */
 
 .navbar {
@@ -83,23 +101,6 @@ input[type="text"] {
 }
 
 /* Banner */
-.banner {
-  padding: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid {
-  width: 85%;
-  height: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 20px;
-}
 
 .banner__content {
   grid-column: 1 / 7;
