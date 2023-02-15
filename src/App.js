@@ -4,11 +4,13 @@ import './public/styles/App.css';
 
 //Componentes
 import Menu from './components/Menu';
+import Bannner from './components/Banner';
 
 function App() {
   return (
     <div className='App'>
       <Menu />
+      <Bannner />
     </div>
   );
 }
