@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import Menu from '../components/Menu'
 import axios from 'axios'
 
 class Search extends Component {
@@ -14,10 +15,11 @@ class Search extends Component {
         //Guardamos los parametros
         var category = this.props.match.params.category
         var search = this.props.match.params.search
+        console.log(search)
 
-        if (category === "a") {
+        if (category === "a" && search === undefined) {
             this.getAllArticles();
-        } else {
+        } else if (category && search === undefined) {
             switch (category) {
                 case "e":
                     this.getAllSpecificCategory("electronics");
@@ -33,6 +35,8 @@ class Search extends Component {
                     break;
             }
 
+        } else if (category && search !== undefined) {
+            this.getSearchedProduct(search)
         }
     }
 
@@ -61,6 +65,33 @@ class Search extends Component {
             })
     }
 
+    getSearchedProduct = (name) => {
+        axios.get('https://fakestoreapi.com/products')
+            .then(res => {
+                //Guardamos array de articulos
+                var articles = res.data
+
+                //Recorremos el array de articulos y tomamos los que coincidan con la busqueda por RegEx
+                var results = []
+                articles.forEach(element => {
+                    var title = element.title
+                    var regex = new RegExp(name, 'i')
+                    var result = regex.test(title)
+
+                    if (result === true) {
+                        results.push(element)
+                    }
+                })
+
+                this.setState({
+                    category: 'all',
+                    articles: results,
+                    status: articles.status
+                })
+                console.log(results)
+            })
+        }
+
     render() {
 
         //Verificamos si hay articulos en el State
@@ -86,11 +117,16 @@ class Search extends Component {
             })
 
             return (
-                <section className='products'>
-                    <div className='flex'>
-                        {listArticles}
-                    </div>
-                </section>
+                <React.Fragment>
+                    <Menu />
+                    
+                    <section className='products'>
+                        <div className='flex'>
+                            {listArticles}
+                        </div>
+                    </section>
+
+                </React.Fragment>
             )
 
         } else {
