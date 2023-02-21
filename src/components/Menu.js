@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 //Imagenes
 import user_icon from '../public/images/user.png'
@@ -9,7 +10,7 @@ class Menu extends Component {
         return (
             <nav className='navbar'>
                 <div className='logo'>
-                    <h1 className='logo__name'>Logo</h1>
+                    <h1 className='logo__name'><NavLink to='/' className='navlink'>Logo</NavLink></h1>
                 </div>
 
                 <div className='search'>
