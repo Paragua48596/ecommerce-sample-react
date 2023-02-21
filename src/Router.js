@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-
-//Componentes
-import Menu from './components/Menu'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 
 //Paginas
 import Home from './pages/Home'
@@ -13,7 +10,6 @@ class Router extends Component {
     render() {
         return (
             <BrowserRouter>
-                <Menu />
 
                 {/*Configurar rutas y paginas*/}
 
@@ -22,6 +18,12 @@ class Router extends Component {
                     {/* Rutas */}
                     <Route exact path="/" component={Home} />
                     <Route exact path="/search/:category?/:search?" component={Searching} />
+                    <Route exact path='/redirect/:search' render={(props) => {
+                        var search = props.match.params.search
+                        return (
+                            <Redirect to={'/search/a/' + search} />
+                        )
+                    }} />
 
                 </Switch>
 
