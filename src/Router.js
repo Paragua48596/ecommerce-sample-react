@@ -7,6 +7,7 @@ import Menu from './components/Menu'
 
 //Paginas
 import Home from './pages/Home'
+import Searching from './pages/Search'
 
 class Router extends Component {
     render() {
@@ -20,6 +21,7 @@ class Router extends Component {
 
                     {/* Rutas */}
                     <Route exact path="/" component={Home} />
+                    <Route exact path="/search/:category?/:search?" component={Searching} />
 
                 </Switch>
 
