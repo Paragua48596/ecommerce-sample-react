@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import iphone from '../public/images/iphone.png'
 import rolex from '../public/images/rolex.png'
 import leather from '../public/images/leather.png'
@@ -18,7 +19,7 @@ class Categories extends Component {
                                 <p className='group__subheader'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p>
-                                <a className='btn'>Ver mas</a>
+                                <Link to='/search/e' className='btn'>Ver mas</Link>
                             </div>
 
                             <div className='group__image'>
@@ -38,7 +39,7 @@ class Categories extends Component {
                                 <p className='group__subheader'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p>
-                                <a className='btn'>Ver mas</a>
+                                <Link to='/search/m' className='btn'>Ver mas</Link>
                             </div>
 
                             <div className='group__image'>
@@ -58,7 +59,7 @@ class Categories extends Component {
                                 <p className='group__subheader'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p>
-                                <a className='btn'>Ver mas</a>
+                                <Link to='/search/w' className='btn'>Ver mas</Link>
                             </div>
 
                             <div className='group__image'>
