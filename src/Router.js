@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 //Paginas
 import Home from './pages/Home'
 import Searching from './pages/Search'
+import Product from './pages/Product'
 
 class Router extends Component {
     render() {
@@ -24,7 +25,7 @@ class Router extends Component {
                             <Redirect to={'/search/a/' + search} />
                         )
                     }} />
-
+                    <Route exact path='/product/:id' component={Product} />
                 </Switch>
 
             </BrowserRouter>
