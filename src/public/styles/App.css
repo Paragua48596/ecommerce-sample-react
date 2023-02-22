@@ -1,6 +1,7 @@
 :root {
   --mainColor: #FF331B;
   --fontColor: #111035;
+  --buyColor: #24ca71;
 }
 
 * {
@@ -15,7 +16,9 @@ body {
   color: var(--fontColor);
 }
 
-section, header, footer {
+section,
+header,
+footer {
   padding: 20px;
 
   display: flex;
@@ -36,7 +39,7 @@ section, header, footer {
 .flex {
   width: 85%;
   height: 100%;
-  
+
   display: flex;
   flex-wrap: wrap;
 }
@@ -191,7 +194,7 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   position: relative;
   overflow: hidden;
 }
@@ -209,7 +212,7 @@ input[type="text"] {
   color: var(--fontColor);
 }
 
-.group > .grid {
+.group>.grid {
   width: 90%;
 }
 
@@ -246,14 +249,14 @@ input[type="text"] {
   background: #38d868;
 }
 
-@media screen and (max-width: 810px){
+@media screen and (max-width: 810px) {
   .group {
     height: auto;
     grid-column: 1 / -1;
   }
 }
 
-@media screen and (max-width: 530px){
+@media screen and (max-width: 530px) {
   .group__content {
     grid-column: 1 / -1;
   }
@@ -314,4 +317,109 @@ input[type="text"] {
 .product__content p {
   font-weight: 400;
   font-size: 1.5rem;
+}
+
+.article {
+  width: 80%;
+  padding: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.article__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article__img {
+  padding: 20px;
+  max-width: 400px;
+  flex: 0 1 300px;
+}
+
+.article__details {
+  max-width: 600px;
+  flex: 1 1 250px;
+  padding: 20px;
+}
+
+.article__details>* {
+  margin-bottom: 20px;
+}
+
+.article__title {
+  font-size: 2.5rem;
+}
+
+.article__desc {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.rating {
+  display: flex;
+}
+
+.rating__p {
+  display: flex;
+  align-items: center;
+}
+
+.article__icon {
+  width: 35px;
+}
+
+.article__price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.btn-buy {
+  color: var(--buyColor);
+  border: 3px solid var(--buyColor);
+  background: #FFF;
+}
+
+.btn-buy:hover {
+  background: var(--buyColor);
+  color: #FFF;
+}
+
+/* Loader */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  margin: auto;
+  border: 10px solid #EAF0F6;
+  border-radius: 50%;
+  border-top: 10px solid var(--fontColor);
+  width: 50px;
+  height: 50px;
+  animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
 }
