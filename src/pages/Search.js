@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 
 import Menu from '../components/Menu'
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
 
 class Search extends Component {
     state = {
         category: '',
         articles: [],
-        status: false
+        status: false,
+        product: '',
+        redirect: false
     }
 
     componentDidMount() {
@@ -90,18 +93,28 @@ class Search extends Component {
                 })
                 console.log(results)
             })
-        }
+    }
+
+    redirect = (productId) => {
+        this.setState({
+            product: productId,
+            redirect: true
+        })
+    }
 
     render() {
+        if (this.state.redirect === true) {
+            return <Redirect to={'/product/' + this.state.product} />
+        }
 
         //Verificamos si hay articulos en el State
         if (this.state.articles.length >= 1) {
 
             //Recorremos array de articulos
-            var listArticles = this.state.articles.map((product) => {
+            var listArticles = this.state.articles.map((product, i) => {
                 //Retornamos un JSX de cada articulo
                 return (
-                    <article className='product'>
+                    <article className='product' onClick={() => this.redirect(product.id)} key={i}>
 
                         <div className='product__image'>
                             <img src={product.image} alt={product.title} className='product__img' />
@@ -119,7 +132,7 @@ class Search extends Component {
             return (
                 <React.Fragment>
                     <Menu />
-                    
+
                     <section className='products'>
                         <div className='flex'>
                             {listArticles}
@@ -131,7 +144,9 @@ class Search extends Component {
 
         } else {
             return (
-                <h1>Cargando...</h1>
+                <div className='container'>
+                    <div class="loader"></div>
+                </div>
             )
         }
     }
