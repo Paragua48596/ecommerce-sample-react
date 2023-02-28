@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
 
 //Paginas
 import Home from './pages/Home'
@@ -10,7 +10,7 @@ import Product from './pages/Product'
 class Router extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <HashRouter>
 
                 {/*Configurar rutas y paginas*/}
 
@@ -28,7 +28,7 @@ class Router extends Component {
                     <Route exact path='/product/:id' component={Product} />
                 </Switch>
 
-            </BrowserRouter>
+            </HashRouter>
 
         )
     }
