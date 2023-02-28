@@ -9,9 +9,9 @@ class Bannner extends Component {
                 <div className='grid'>
 
                     <div className='banner__content'>
-                        <h1 className='banner__headline'>Encuentra tu mejor portatil al mejor costo</h1>
+                        <h1 className='banner__headline'>Find your best laptop at the best cost</h1>
                         <h2 className='banner__subheader'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis tempus est, a convallis erat.</h2>
-                        <Link to='/search/a' className='btn'>Explorar</Link>
+                        <Link to='/search/a' className='btn'>Explore</Link>
                     </div>
 
                     <div className='banner__image'>

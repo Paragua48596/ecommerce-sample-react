@@ -14,12 +14,12 @@ class Categories extends Component {
 
                             <div className='group__content'>
                                 <h2 className='group__headline'>
-                                    Encuentra electronica de consumo
+                                    All electronic devices
                                 </h2>
                                 <p className='group__subheader'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p>
-                                <Link to='/search/e' className='btn'>Ver mas</Link>
+                                <Link to='/search/e' className='btn'>Read more</Link>
                             </div>
 
                             <div className='group__image'>
@@ -34,18 +34,18 @@ class Categories extends Component {
 
                             <div className='group__content'>
                                 <h2 className='group__headline'>
-                                    La mejor moda para hombres
+                                    Men's fashion
                                 </h2>
                                 <p className='group__subheader'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p>
-                                <Link to='/search/m' className='btn'>Ver mas</Link>
+                                <Link to='/search/m' className='btn'>Read more</Link>
                             </div>
 
                             <div className='group__image'>
                                 <img src={rolex} alt='iphone 14' />
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -54,18 +54,18 @@ class Categories extends Component {
 
                             <div className='group__content'>
                                 <h2 className='group__headline'>
-                                    Encuentra moda femenina
+                                    The best women's clothing
                                 </h2>
                                 <p className='group__subheader'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </p>
-                                <Link to='/search/w' className='btn'>Ver mas</Link>
+                                <Link to='/search/w' className='btn'>Read more</Link>
                             </div>
 
                             <div className='group__image'>
                                 <img src={leather} alt='iphone 14' />
                             </div>
-                            
+
                         </div>
                     </div>
 

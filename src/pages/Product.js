@@ -74,7 +74,7 @@ class Product extends Component {
 
                                     <p className='article__price'>$ {product.price}</p>
                                     
-                                    <button className='btn btn-buy'>Comprar</button>
+                                    <button className='btn btn-buy'>Buy</button>
 
                                 </div>
 
