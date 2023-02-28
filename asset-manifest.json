@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ecommerce-sample-react/static/css/main.b0a9a8d0.css",
+    "main.js": "/ecommerce-sample-react/static/js/main.ca02f1b8.js",
+    "static/js/787.dcc73137.chunk.js": "/ecommerce-sample-react/static/js/787.dcc73137.chunk.js",
+    "static/media/rolex.png": "/ecommerce-sample-react/static/media/rolex.8efbf7164256b88521b2.png",
+    "static/media/iphone.png": "/ecommerce-sample-react/static/media/iphone.3bae8efed45d10b7ce42.png",
+    "static/media/leather.png": "/ecommerce-sample-react/static/media/leather.5008e751bc245dcad0f8.png",
+    "static/media/banner.png": "/ecommerce-sample-react/static/media/banner.0be332a048e438769293.png",
+    "static/media/logo.svg": "/ecommerce-sample-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/ecommerce-sample-react/index.html",
+    "main.b0a9a8d0.css.map": "/ecommerce-sample-react/static/css/main.b0a9a8d0.css.map",
+    "main.ca02f1b8.js.map": "/ecommerce-sample-react/static/js/main.ca02f1b8.js.map",
+    "787.dcc73137.chunk.js.map": "/ecommerce-sample-react/static/js/787.dcc73137.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0a9a8d0.css",
+    "static/js/main.ca02f1b8.js"
+  ]
+}
